@@ -5,9 +5,10 @@ import { createStore } from 'redux';
 import reducers from './reducers';
 import { Header } from './components/common';
 
+const myStore = createStore(reducers)
 const App = () => {
   return (
-    <Provider store={createStore(reducers)}>
+    <Provider store={myStore}>
       <View>
         <Header headerText="Tech Stack" />
       </View>
